@@ -8,9 +8,10 @@ public class Board {
 	
 	//constructor(s)
 	public Board(){
-		//initialize the values for two 10x10 2D arrays with dashes using nested for loop which circulates through the array going row by row (Runestone 4.11)
+		//specify size of the 2D arrays squares1 and squares2
 		squares1 = new String[10][10];
 		squares2 = new String[10][10];
+		//initialize the values for two 10x10 2D arrays with dashes using nested for loop which circulates through the arrays going row by row (Runestone 4.11)
 		for (int r=0;r<10;r++){
 			for (int c=0;c<10;c++){
 				squares1[r][c] = "-";
