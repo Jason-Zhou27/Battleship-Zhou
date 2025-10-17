@@ -8,41 +8,24 @@ public class Board {
 	
 	//constructor(s)
 	public Board(){
-		//initialize the values for a 10x10 array with dashes(Runestone 4.11.3)
-		//the size of the array (10x10) is determined from the values given (Runestone 4.11.3)
-		squares1 = new String[][] { 
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",}
-		};
-		
-		squares2 = new String[][] { 
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",},
-			{"-","-","-","-","-","-","-","-","-","-",}
-		};
+		//initialize the values for two 10x10 2D arrays with dashes using nested for loop which circulates through the array going row by row (Runestone 4.11)
+		squares1 = new String[10][10];
+		squares2 = new String[10][10];
+		for (int r=0;r<10;r++){
+			for (int c=0;c<10;c++){
+				squares1[r][c] = "-";
+				squares2[r][c] = "-";
+			}
+		}
 	}
+
 	//methods
 	
 	//return representation of the board
 	public String toString(){
 		//use a nested for loop to concactenate row by row of square1
 		for (int r=0;r<10;r++){
-			//within a row, fetch strings by shifting columns in the 2d array 
+			//within a row, fetch strings by shifting columns in the 2D array 
 			for (int c=0;c<10;c++){
 				strSquares1 = strSquares1 + (squares1[r][c]) + " "; //use the format: existing concactenation + character from particular position + space
 			}
@@ -51,7 +34,7 @@ public class Board {
 		
 		//use a nested for loop to concactenate row by row of square2
 		for (int r=0;r<10;r++){
-			//within a row, fetch strings by shifting columns in the 2d array
+			//within a row, fetch strings by shifting columns in the 2D array
 			for (int c=0;c<10;c++){
 				strSquares2 = strSquares2 + (squares2[r][c]) + " "; //use the format: existing concactenation + character from particular position + space
 			}
