@@ -5,8 +5,11 @@ public class Board {
 	//variables
 	private String[][] squares1; //declare 2D array of Strings called squares1; squares1 will show the player's board
 	private String[][] squares2; //declare 2D array of Strings called squares2; squares2 will show the hits/misses that the player had on the computer's board
-	private String strSquares1 = "";
-	private String strSquares2 = "";
+	private String strSquares1;
+	private String strSquares2;
+	private char[] letters = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+	private String temp;
+	private char c;
 	
 	//constructor(s)
 	public Board(){
@@ -20,14 +23,18 @@ public class Board {
 				squares2[r][c] = "-";
 			}
 		}
+		Scanner sc = new Scanner(System.in);
 	}
 
 	//methods
 	
 	//return representation of the board
 	public String toString(){
+		strSquares1 = strSquares1 + "  1 2 3 4 5 6 7 8 9 10\n";
 		//use a nested for loop to concactenate row by row of square1
 		for (int r=0;r<10;r++){
+			strSquares1 = strSquares1 + letters[r] + " ";
+			
 			//within a row, fetch strings by shifting columns in the 2D array 
 			for (int c=0;c<10;c++){
 				strSquares1 = strSquares1 + (squares1[r][c]) + " "; //use the format: existing concactenation + character from particular position + space
@@ -35,8 +42,10 @@ public class Board {
 			strSquares1 = strSquares1 + ("\n"); //after a row of dashes is completed, create a new line
 		}
 		
+		strSquares2 = strSquares2 + "  1 2 3 4 5 6 7 8 9 10\n";
 		//use a nested for loop to concactenate row by row of square2
 		for (int r=0;r<10;r++){
+			strSquares2 = strSquares2 + letters[r] + " ";
 			//within a row, fetch strings by shifting columns in the 2D array
 			for (int c=0;c<10;c++){
 				strSquares2 = strSquares2 + (squares2[r][c]) + " "; //use the format: existing concactenation + character from particular position + space
@@ -47,6 +56,16 @@ public class Board {
 	}
 	
 	public int toInt() {
+		temp = sc.next();
+		c = temp.charAt(0);
+		for (int i=0;i<10;i++){
+			if (c==letters[i]){
+				return i;
+			}	
+		}			
+	}
+	
+	public void addShip() {
 		
-	}	
+	}		
 }
