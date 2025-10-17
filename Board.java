@@ -23,6 +23,8 @@ public class Board {
 				squares2[r][c] = "-";
 			}
 		}
+		strSquares1 = "*";
+		strSquares2 = "*";
 		Scanner sc = new Scanner(System.in);
 	}
 
@@ -55,7 +57,7 @@ public class Board {
 		return (strSquares1 + "\n\n" + strSquares2); //return the concactenation of the two squares, separating the two squares by two line breaks
 	}
 	
-	public int toInt() {
+	/*public int toInt() {
 		temp = sc.next();
 		c = temp.charAt(0);
 		for (int i=0;i<10;i++){
@@ -64,7 +66,7 @@ public class Board {
 			}	
 		}			
 	}
-	
+	*/
 	public void addShip() {
 		
 	}		
