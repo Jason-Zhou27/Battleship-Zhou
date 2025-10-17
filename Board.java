@@ -1,8 +1,10 @@
+import java.util.Scanner;
+
 public class Board {
 
 	//variables
-	private String[][] squares1; //declare 2D array of Strings called squares1
-	private String[][] squares2; //declare 2D array of Strings called squares2
+	private String[][] squares1; //declare 2D array of Strings called squares1; squares1 will show the player's board
+	private String[][] squares2; //declare 2D array of Strings called squares2; squares2 will show the hits/misses that the player had on the computer's board
 	private String strSquares1 = "";
 	private String strSquares2 = "";
 	
@@ -43,4 +45,8 @@ public class Board {
 		}
 		return (strSquares1 + "\n\n" + strSquares2); //return the concactenation of the two squares, separating the two squares by two line breaks
 	}
+	
+	public int toInt() {
+		
+	}	
 }
