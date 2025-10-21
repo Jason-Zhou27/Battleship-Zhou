@@ -10,6 +10,7 @@ public class Board {
 	private char[] letters = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
 	private String temp;
 	private char c;
+	private String[] shipNames = {};
 	
 	//constructor(s)
 	public Board(){
@@ -32,6 +33,7 @@ public class Board {
 	
 	//return representation of the board
 	public String toString(){
+		strSquares1= strSquares1 + ("Your guess");
 		strSquares1 = strSquares1 + "  1 2 3 4 5 6 7 8 9 10\n";
 		//use a nested for loop to concactenate row by row of square1
 		for (int r=0;r<10;r++){
@@ -44,6 +46,7 @@ public class Board {
 			strSquares1 = strSquares1 + ("\n"); //after a row of dashes is completed, create a new line
 		}
 		
+		strSquares2 = strSquares2+ ("Your board");
 		strSquares2 = strSquares2 + "  1 2 3 4 5 6 7 8 9 10\n";
 		//use a nested for loop to concactenate row by row of square2
 		for (int r=0;r<10;r++){
@@ -67,7 +70,9 @@ public class Board {
 		}			
 	}
 	*/
-	public void addShip() {
+	public boolean addShips() {
+		
+		for (int i = 0
 		
 	}		
 }
