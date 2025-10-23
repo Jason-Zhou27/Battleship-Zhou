@@ -79,6 +79,12 @@ public class Board {
 		* 	use a for each loop to determine whether the characters at those locations of an array EXIST or are occupied already by a "b"
 		* 		if a location EXISTS and is occupied not by a "b," do not do anything
 		* 		if a location DOES NOT EXIST OR is OCCUPIED by a "b," turn the boolean called possible FALSE
+		* if boolean possbile is FALSE
+		* 	return FALSE to notify user nd do not change array 
+		* 
+		*  if boolean possible is TRUE 
+		* 	change each value in the array that is a "-" to "b" using a for loop 
+		* 	return TRUE to notify user that the placement of ship is possible and was executed
 		
 	}
 	*/		
