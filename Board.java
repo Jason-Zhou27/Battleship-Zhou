@@ -70,9 +70,16 @@ public class Board {
 		}			
 	}
 	*/
-	public boolean addShips() {
+	/*
+	public boolean addShips(int row, int col, int len, boolean horizontal) {
 		
-		for (int i = 0
+		define and initilize boolean possible to FALSE
 		
-	}		
+		transverse the array in the direction which parameter specifies at its specific length starting at squares1[row][col]
+		* 	use a for each loop to determine whether the characters at those locations of an array EXIST or are occupied already by a "b"
+		* 		if a location EXISTS and is occupied not by a "b," do not do anything
+		* 		if a location DOES NOT EXIST OR is OCCUPIED by a "b," turn the boolean called possible FALSE
+		
+	}
+	*/		
 }
